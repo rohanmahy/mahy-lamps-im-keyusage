@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-08-25T01:09:20.004672+00:00",
+  "timestamp": "2024-08-27T01:05:04.379890+00:00",
   "repo": "rohanmahy/mahy-lamps-im-keyusage",
   "labels": [
     {
@@ -99,5 +99,32 @@
       ]
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 3,
+      "id": "PR_kwDOKkJho855eFvH",
+      "title": "Table 2 update",
+      "url": "https://github.com/rohanmahy/mahy-lamps-im-keyusage/pull/3",
+      "state": "OPEN",
+      "author": "seanturner",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixing typo in Table 2; see [email](https://mailarchive.ietf.org/arch/msg/spasm/fTM5jt6QHpHmF0FwqyX5ymZRiUg/)",
+      "createdAt": "2024-08-26T17:50:06Z",
+      "updatedAt": "2024-08-26T17:50:06Z",
+      "baseRepository": "rohanmahy/mahy-lamps-im-keyusage",
+      "baseRefName": "main",
+      "baseRefOid": "eab2b512a930bee84665730d90428d19b464417c",
+      "headRepository": "seanturner/mahy-lamps-im-keyusage",
+      "headRefName": "patch-1",
+      "headRefOid": "2dce9ab42820eb61c25b1615751fbba3d001bde1",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
