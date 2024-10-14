@@ -167,5 +167,14 @@ END
 
 RFC Editor, please remove this section on publication.
 
+* added a MAY statement in Section 3
+* corrected typo in registration of the ASN.1 module (Thanks Sean!)
+* updated author affiliation
 * added ASN.1 module
 * specified that eku is optionally critical
+
+# Acknowledgments
+{:numbered="false"}
+
+Thanks to Sean Turner and Russ Housley for reviews, suggestions,
+corrections, and encouragement.
