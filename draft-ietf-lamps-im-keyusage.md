@@ -29,7 +29,7 @@ venue:
 author:
  -
     fullname: Rohan Mahy
-    organization: Unaffiliated
+    organization: Rohan Mahy Consulting Services
     email: rohan.ietf@gmail.com
 
 normative:
@@ -73,15 +73,16 @@ certificates
 
 Instant Messaging (IM) systems using the Messaging Layer Security (MLS)
 {{?RFC9420}} protocol can incorporate per-client identity certificate
-credentials. The subjectAltName of these certificates can be an IM URI, for
-example. Since IM clients could be very numerous, operators are
-reticent to issue certificates for these users that might accidentally be used
-to validate a TLS connection because it has the KeyPurposeId `id-kp-serverAuth` or
-`id-kp-clientAuth`.
+credentials. The subjectAltName of these certificates can be an IM URI or
+XMPP URI, for example. Since IM clients could be very numerous, operators
+are reticent to issue certificates for these users that might accidentally
+be used to validate a TLS connection because it has the KeyPurposeId
+`id-kp-serverAuth` or `id-kp-clientAuth`.
 
-An explanation of MLS credentials as they apply to Instant Messaging is described
-in {{?I-D.barnes-mimi-identity-arch}}. These credentials are expected to be
-heavily used in the More Instant Messaging Interoperability (MIMI) Working Group.
+An explanation of MLS credentials as they apply to Instant Messaging is
+described in {{?I-D.barnes-mimi-identity-arch}}. These credentials are
+expected to be heavily used in the More Instant Messaging Interoperability
+(MIMI) Working Group.
 
 
 # Conventions and Definitions
@@ -163,6 +164,8 @@ END
 ~~~
 
 # Change log
+
+RFC Editor, please remove this section on publication.
 
 * added ASN.1 module
 * specified that eku is optionally critical
