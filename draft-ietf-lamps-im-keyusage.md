@@ -91,7 +91,7 @@ expected to be heavily used in the More Instant Messaging Interoperability
 
 # The IM URI Extended Key Usage
 
-This specification defines the KeyPurposeId id-kp-imUri, which is used
+This specification defines the KeyPurposeId id-kp-imUri, which MAY be used
 for signing messages to prove the identity of an Instant Messaging client.
 This Extended Key Usage is optionally critical.
 
