@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-13T01:15:31.709714+00:00",
+  "timestamp": "2024-10-15T01:11:49.234569+00:00",
   "repo": "rohanmahy/mahy-lamps-im-keyusage",
   "labels": [
     {
@@ -57,7 +57,7 @@
       "url": "https://github.com/rohanmahy/mahy-lamps-im-keyusage/issues/1",
       "state": "CLOSED",
       "author": "seanturner",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Add an ASN.1 module, it'll be short and I can do it for you.",
@@ -81,7 +81,7 @@
       "url": "https://github.com/rohanmahy/mahy-lamps-im-keyusage/issues/2",
       "state": "CLOSED",
       "author": "seanturner",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "When defining an EKU, need to say whether it's always critical, never critical, or optionally critical.",
@@ -105,26 +105,42 @@
       "id": "PR_kwDOKkJho855eFvH",
       "title": "Table 2 update",
       "url": "https://github.com/rohanmahy/mahy-lamps-im-keyusage/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "seanturner",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Fixing typo in Table 2; see [email](https://mailarchive.ietf.org/arch/msg/spasm/fTM5jt6QHpHmF0FwqyX5ymZRiUg/)",
       "createdAt": "2024-08-26T17:50:06Z",
-      "updatedAt": "2024-08-26T17:50:06Z",
+      "updatedAt": "2024-10-14T18:46:27Z",
       "baseRepository": "rohanmahy/mahy-lamps-im-keyusage",
       "baseRefName": "main",
       "baseRefOid": "eab2b512a930bee84665730d90428d19b464417c",
       "headRepository": "seanturner/mahy-lamps-im-keyusage",
       "headRefName": "patch-1",
       "headRefOid": "2dce9ab42820eb61c25b1615751fbba3d001bde1",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-10-14T18:46:26Z",
+      "mergedAt": "2024-10-14T18:46:26Z",
+      "mergedBy": "rohanmahy",
+      "mergeCommit": {
+        "oid": "1eb71e84972937d2127d6e88e4695b194de52e68"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOKkJho86NG5Kc",
+          "commit": {
+            "abbreviatedOid": "2dce9ab"
+          },
+          "author": "rohanmahy",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-10-14T18:46:17Z",
+          "updatedAt": "2024-10-14T18:46:17Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
