@@ -4,8 +4,8 @@
 
 LAMPS WG                                                         R. Mahy
 Internet-Draft                            Rohan Mahy Consulting Services
-Intended status: Informational                           14 October 2024
-Expires: 17 April 2025
+Intended status: Standards Track                         20 October 2024
+Expires: 23 April 2025
 
 
  X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 April 2025.
+   This Internet-Draft will expire on 23 April 2025.
 
 Copyright Notice
 
@@ -231,6 +231,8 @@ Appendix A.  ASN.1 Module
 Appendix B.  Change log
 
    RFC Editor, please remove this section on publication.
+
+   *  made Proposed Standard
 
    *  added a MAY statement in Section 3
 
