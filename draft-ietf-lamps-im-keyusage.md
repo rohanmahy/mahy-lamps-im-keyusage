@@ -1,7 +1,7 @@
 ---
 title: "X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs"
 abbrev: "extendedKeyUsage for IM URIs"
-category: info
+category: std
 
 docname: draft-ietf-lamps-im-keyusage-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
@@ -167,6 +167,7 @@ END
 
 RFC Editor, please remove this section on publication.
 
+* made Proposed Standard
 * added a MAY statement in Section 3
 * corrected typo in registration of the ASN.1 module (Thanks Sean!)
 * updated author affiliation
