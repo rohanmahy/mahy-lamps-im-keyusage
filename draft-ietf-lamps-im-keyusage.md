@@ -74,10 +74,12 @@ certificates
 Instant Messaging (IM) systems using the Messaging Layer Security (MLS)
 {{?RFC9420}} protocol can incorporate per-client identity certificate
 credentials. The subjectAltName of these certificates can be an IM URI or
-XMPP URI, for example. Since IM clients could be very numerous, operators
-are reticent to issue certificates for these users that might accidentally
-be used to validate a TLS connection because it has the KeyPurposeId
-`id-kp-serverAuth` or `id-kp-clientAuth`.
+XMPP URI, for example.
+
+Organizations may be unwilling to issue certificates for Instant Message
+client using a general KeyPurposeId such as `id-kp-serverAuth` or
+`id-kp-clientAuth`, because of the risk that such certificates could be
+abused in a cross-protocol attack.
 
 An explanation of MLS credentials as they apply to Instant Messaging is
 described in {{?I-D.barnes-mimi-identity-arch}}. These credentials are
@@ -91,9 +93,9 @@ expected to be heavily used in the More Instant Messaging Interoperability
 
 # The IM URI Extended Key Usage
 
-This specification defines the KeyPurposeId id-kp-imUri, which MAY be used
-for signing messages to prove the identity of an Instant Messaging client.
-This Extended Key Usage is optionally critical.
+This specification defines the KeyPurposeId id-kp-imUri, which
+MAY be included in certificates used to prove the identity of an Instant
+Messaging client. This Extended Key Usage is optionally critical.
 
 ~~~
 id-kp  OBJECT IDENTIFIER  ::= {
@@ -102,7 +104,6 @@ id-kp  OBJECT IDENTIFIER  ::= {
 
 id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
 ~~~
-
 
 
 # Security Considerations
