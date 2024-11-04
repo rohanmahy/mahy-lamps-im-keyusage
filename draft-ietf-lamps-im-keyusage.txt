@@ -4,8 +4,8 @@
 
 LAMPS WG                                                         R. Mahy
 Internet-Draft                            Rohan Mahy Consulting Services
-Intended status: Standards Track                         20 October 2024
-Expires: 23 April 2025
+Intended status: Standards Track                         4 November 2024
+Expires: 8 May 2025
 
 
  X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 April 2025.
+   This Internet-Draft will expire on 8 May 2025.
 
 Copyright Notice
 
@@ -87,10 +87,12 @@ Table of Contents
    Instant Messaging (IM) systems using the Messaging Layer Security
    (MLS) [RFC9420] protocol can incorporate per-client identity
    certificate credentials.  The subjectAltName of these certificates
-   can be an IM URI or XMPP URI, for example.  Since IM clients could be
-   very numerous, operators are reticent to issue certificates for these
-   users that might accidentally be used to validate a TLS connection
-   because it has the KeyPurposeId id-kp-serverAuth or id-kp-clientAuth.
+   can be an IM URI or XMPP URI, for example.
+
+   Organizations may be unwilling to issue certificates for Instant
+   Message client using a general KeyPurposeId such as id-kp-serverAuth
+   or id-kp-clientAuth, because of the risk that such certificates could
+   be abused in a cross-protocol attack.
 
    An explanation of MLS credentials as they apply to Instant Messaging
    is described in [I-D.barnes-mimi-identity-arch].  These credentials
@@ -108,7 +110,7 @@ Table of Contents
 3.  The IM URI Extended Key Usage
 
    This specification defines the KeyPurposeId id-kp-imUri, which MAY be
-   used for signing messages to prove the identity of an Instant
+   included in certificates used to prove the identity of an Instant
    Messaging client.  This Extended Key Usage is optionally critical.
 
    id-kp  OBJECT IDENTIFIER  ::= {
