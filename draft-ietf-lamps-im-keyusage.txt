@@ -4,8 +4,8 @@
 
 LAMPS WG                                                         R. Mahy
 Internet-Draft                            Rohan Mahy Consulting Services
-Intended status: Standards Track                         4 November 2024
-Expires: 8 May 2025
+Intended status: Standards Track                        30 November 2024
+Expires: 3 June 2025
 
 
  X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 May 2025.
+   This Internet-Draft will expire on 3 June 2025.
 
 Copyright Notice
 
@@ -86,8 +86,8 @@ Table of Contents
 
    Instant Messaging (IM) systems using the Messaging Layer Security
    (MLS) [RFC9420] protocol can incorporate per-client identity
-   certificate credentials.  The subjectAltName of these certificates
-   can be an IM URI or XMPP URI, for example.
+   certificate credentials.  A subjectAltName in these certificates can
+   be an IM URI [RFC3860] or XMPP URI [RFC6121], for example.
 
    Organizations may be unwilling to issue certificates for Instant
    Message client using a general KeyPurposeId such as id-kp-serverAuth
@@ -109,9 +109,10 @@ Table of Contents
 
 3.  The IM URI Extended Key Usage
 
-   This specification defines the KeyPurposeId id-kp-imUri, which MAY be
+   This specification defines the KeyPurposeId id-kp-imUri, which may be
    included in certificates used to prove the identity of an Instant
-   Messaging client.  This Extended Key Usage is optionally critical.
+   Messaging client.  This EKU extension MAY, at the option of the
+   certificate issuer, be either critical or non-critical.
 
    id-kp  OBJECT IDENTIFIER  ::= {
      iso(1) identified-organization(3) dod(6) internet(1)
@@ -194,6 +195,15 @@ Table of Contents
               barnes-mimi-identity-arch-01, 23 October 2023,
               <https://datatracker.ietf.org/doc/html/draft-barnes-mimi-
               identity-arch-01>.
+
+   [RFC3860]  Peterson, J., "Common Profile for Instant Messaging
+              (CPIM)", RFC 3860, DOI 10.17487/RFC3860, August 2004,
+              <https://www.rfc-editor.org/rfc/rfc3860>.
+
+   [RFC6121]  Saint-Andre, P., "Extensible Messaging and Presence
+              Protocol (XMPP): Instant Messaging and Presence",
+              RFC 6121, DOI 10.17487/RFC6121, March 2011,
+              <https://www.rfc-editor.org/rfc/rfc6121>.
 
    [RFC9420]  Barnes, R., Beurdouche, B., Robert, R., Millican, J.,
               Omara, E., and K. Cohn-Gordon, "The Messaging Layer
