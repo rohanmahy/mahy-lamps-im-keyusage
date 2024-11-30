@@ -73,8 +73,8 @@ certificates
 
 Instant Messaging (IM) systems using the Messaging Layer Security (MLS)
 {{?RFC9420}} protocol can incorporate per-client identity certificate
-credentials. The subjectAltName of these certificates can be an IM URI or
-XMPP URI, for example.
+credentials. A subjectAltName in these certificates can be an IM URI
+{{?RFC3860}} or XMPP URI {{?RFC6121}}, for example.
 
 Organizations may be unwilling to issue certificates for Instant Message
 client using a general KeyPurposeId such as `id-kp-serverAuth` or
