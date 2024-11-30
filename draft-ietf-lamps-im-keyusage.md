@@ -94,8 +94,10 @@ expected to be heavily used in the More Instant Messaging Interoperability
 # The IM URI Extended Key Usage
 
 This specification defines the KeyPurposeId id-kp-imUri, which
-MAY be included in certificates used to prove the identity of an Instant
-Messaging client. This Extended Key Usage is optionally critical.
+may be included in certificates used to prove the identity of an Instant
+Messaging client.
+This EKU extension MAY, at the option of the certificate issuer, be either
+critical or non-critical.
 
 ~~~
 id-kp  OBJECT IDENTIFIER  ::= {
