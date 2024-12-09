@@ -114,6 +114,10 @@ The Security Considerations of {{!RFC5280}} are applicable to this
 document.  This extended key purpose does not introduce new security
 risks but instead reduces existing security risks by providing means
 to identify if the certificate is generated to sign IM identity credentials.
+Issuers SHOULD NOT set the `id-kp-imUri` extended key purpose and an
+`id-kp-clientAuth` or `id-kp-serverAuth` extended key purpose, as that would
+defeat the improved specificity offered by having an `id-kp-imUri` extended key
+purpose.
 
 # IANA Considerations
 
