@@ -4,8 +4,8 @@
 
 LAMPS WG                                                         R. Mahy
 Internet-Draft                            Rohan Mahy Consulting Services
-Intended status: Standards Track                        30 November 2024
-Expires: 3 June 2025
+Intended status: Standards Track                         9 December 2024
+Expires: 12 June 2025
 
 
  X.509 Certificate Extended Key Usage (EKU) for Instant Messaging URIs
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 June 2025.
+   This Internet-Draft will expire on 12 June 2025.
 
 Copyright Notice
 
@@ -126,7 +126,10 @@ Table of Contents
    document.  This extended key purpose does not introduce new security
    risks but instead reduces existing security risks by providing means
    to identify if the certificate is generated to sign IM identity
-   credentials.
+   credentials.  Issuers SHOULD NOT set the id-kp-imUri extended key
+   purpose and an id-kp-clientAuth or id-kp-serverAuth extended key
+   purpose, as that would defeat the improved specificity offered by
+   having an id-kp-imUri extended key purpose.
 
 5.  IANA Considerations
 
