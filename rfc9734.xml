@@ -33,7 +33,7 @@
 
 <t>RFC 5280 specifies several extended key purpose identifiers
 (KeyPurposeIds) for X.509 certificates.  This document defines
-Instant Messaging (IM) identity KeyPurposeId for inclusion in
+an Instant Messaging (IM) identity KeyPurposeId for inclusion in
 the Extended Key Usage (EKU) extension of X.509 v3 public key
 certificates</t>
     </abstract>
@@ -46,7 +46,7 @@ certificates</t>
 <xref target="RFC9420"/> protocol can incorporate per-client identity certificate
 credentials. A subjectAltName in these certificates can be an IM URI
 <xref target="RFC3860"/> or Extensible Messaging and Presence Protocol (XMPP) URI <xref target="RFC6121"/>, for example.</t>
-      <t>Organizations may be unwilling to issue certificates for an IM 
+      <t>Organizations may be unwilling to issue certificates for an IM
 client using a general KeyPurposeId, such as <tt>id-kp-serverAuth</tt> or
 <tt>id-kp-clientAuth</tt>, because of the risk that such certificates could be
 abused in a cross-protocol attack.</t>
@@ -55,6 +55,7 @@ described in <xref target="I-D.barnes-mimi-identity-arch"/>. These credentials a
 expected to be heavily used in the More Instant Messaging Interoperability
 (MIMI) Working Group.</t>
     </section>
+
     <section anchor="conventions-and-definitions">
       <name>Conventions and Definitions</name>
         <t>
@@ -68,35 +69,13 @@ expected to be heavily used in the More Instant Messaging Interoperability
     shown here.
         </t>
     </section>
+
     <section anchor="the-im-uri-extended-key-usage">
       <name>The IM URI EKU</name>
       <t>This specification defines the KeyPurposeId <tt>id-kp-imUri</tt>, which may be
       included in certificates used to prove the identity of an IM client.  This EKU extension <bcp14>MAY</bcp14>, at the option
       of the certificate issuer, be either critical or non-critical.</t>
 
-<!--[rfced] We note a small discrepancy between the ASN.1 snippet in
-     Section 3 and the ASN.1 in Appendix A: the { character at the end
-     of the "id-kp" line in Section 3 is on the following line in the
-     Appendix.  Please review and let us know if/how to make these
-     consistent.  Might it be possible to simply point the reader to
-     Appendix A instead of repeating the code?
-
-Original (Section 3):
-id-kp  OBJECT IDENTIFIER  ::= {
-  iso(1) identified-organization(3) dod(6) internet(1)
-  security(5) mechanisms(5) pkix(7) kp(3) }
-
-id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
-
-Original (Appendix A):
-id-kp OBJECT IDENTIFIER ::=
-  { iso(1) identified-organization(3) dod(6) internet(1)
-    security(5) mechanisms(5) pkix(7) kp(3) }
-   
-
-id-kp-imUri OBJECT IDENTIFIER ::= { id-kp TBD1 }
-
--->
 <sourcecode type="asn.1"><![CDATA[
 id-kp  OBJECT IDENTIFIER  ::= {
   iso(1) identified-organization(3) dod(6) internet(1)
@@ -105,28 +84,12 @@ id-kp  OBJECT IDENTIFIER  ::= {
 id-kp-imUri OBJECT IDENTIFIER ::= { id-kp 40 }]]></sourcecode>
 
     </section>
+
     <section anchor="security-considerations">
       <name>Security Considerations</name>
 
-<!--[rfced] Might it be beneficial to the reader to replace "This"
-     with the antecedent?  If so, we will also use the necessary <tt>
-     marking in the xml.
-
-Original:
-This extended key purpose does not introduce new security risks but
-instead reduces existing security risks by providing means to identify
-if the certificate is generated to sign IM identity credentials.
-
-Perhaps:
-The KeyPurposeId id-kp-imUri does not introduce new security risks;
-instead, it reduces existing security risks by providing means to
-identify if the certificate is generated to sign IM identity
-credentials.
-
--->
-      
       <t>The security considerations of <xref target="RFC5280"/> are applicable to this
-document.  This extended key purpose does not introduce new security
+document.  The <tt>id-kp-imUri</tt> Extended Key Purpose does not introduce new security
 risks but instead reduces existing security risks by providing means
 to identify if the certificate is generated to sign IM identity credentials.
 Issuers <bcp14>SHOULD NOT</bcp14> set the <tt>id-kp-imUri</tt> extended key purpose and an
@@ -134,31 +97,12 @@ Issuers <bcp14>SHOULD NOT</bcp14> set the <tt>id-kp-imUri</tt> extended key purp
 defeat the improved specificity offered by having an <tt>id-kp-imUri</tt> extended key
 purpose.</t>
     </section>
+
     <section anchor="iana-considerations">
       <name>IANA Considerations</name>
-      
-<!-- [rfced] We had the following questions regarding the IANA
-     Considerations section:
-
-a) Please review the citation to the Security Considerations section
-in the following text:
-
-Original:
-IANA is requested to register the following OIDs in the "SMI Security
-for PKIX Extended Key Purpose" registry (1.3.6.1.5.5.7.3). These OIDs
-are defined in Section 4.
-
-Section 3 defines the "KeyPurposeId id-kp-imUri".  We will update
-unless we hear objection.
-
-b) We note that the first paragraph of the IANA Considerations spoke
-of OIDs (plural), but we see only one registration in the IANA
-registry mentioned. We have updated to use the singular.  Please
-review that this is as intended.
--->
       <t>IANA has registered the following OID in the "SMI Security
 for PKIX Extended Key Purpose" registry (1.3.6.1.5.5.7.3).  This
-OID is defined in <xref target="security-considerations"/>.</t>
+OID is defined in <xref target="the-im-uri-extended-key-usage"/>.</t>
       <table>
         <thead>
           <tr>
@@ -235,9 +179,6 @@ module OID in the "SMI Security for PKIX Module Identifier" registry (1.3.6.1.5.
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9420.xml"/>
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.3860.xml"/>
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.6121.xml"/>
-<!-- [I-D.barnes-mimi-identity-arch] IESG State: Expired as of 12/13/24.
-
- -->
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.barnes-mimi-identity-arch.xml"/>
       </references>
     </references>
@@ -282,50 +223,6 @@ END
       encouragement.</t>
     </section>
 
-<!--[rfced] We had the following comments regarding abbreviation use
-     in this document:
-
-a) Please note that we have expanded the following abbreviations.
-Please review and let us know any objections.
-
-XMPP - Extensible Messaging and Presence Protocol
-
-b) Please note that we have updated frequently used expanded
-abbreviations to remove their expansions after first use in accordance
-with the guidance at
-https://www.rfc-editor.org/styleguide/part2/#exp_abbrev.-->
-    
-
-<!-- [rfced] Please review the "type" attribute of each sourcecode
-     element in the XML file to ensure correctness. If the current
-     list of preferred values for "type"
-     (https://www.rfc-editor.org/rpc/wiki/doku.php?id=sourcecode-types)
-     does not contain an applicable type, then feel free to let us
-     know.  Also, it is acceptable to leave the "type" attribute not
-     set.
-
-Particularly, note that we have updated an <artwork> tag in Section 3
-to instead appear as <sourcecode>.  Please review and let us know any
-objections.
- -->
-
-<!--[rfced] Please note that we have added a single pair of <tt> tags
-     around a use of id-kp-imUri for consistency.  Please let us know
-     any objections.-->
-
-<!--[rfced] Please review the "Inclusive Language" portion of the
-     online Style Guide
-     <https://www.rfc-editor.org/styleguide/part2/#inclusive_language>
-     and let us know if any changes are needed.  Updates of this
-     nature typically result in more precise language, which is
-     helpful for readers.
-
-Note that our script did not flag any words in particular, but this
-should still be reviewed as a best practice.
-
--->
-
-    
   </back>
 
 </rfc>
